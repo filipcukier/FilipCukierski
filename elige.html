@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <title>EliGE</title>
+  <link rel="stylesheet" href="css/podstrony.css" type="text/css"/>
+		
+		<script>
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+				
+			}
+			
+		
+			function zmienslajd()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"photos/elige/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("zmienslajd()", 3000);
+				timer2 = setTimeout("schowaj()", 2500);
+			
+			}
+			
+		</script>
+
+</head>
+
+<body onload="zmienslajd()">
+ 
+<div id="container">
+   <div id="logo">
+   <div id="logo1"><img src="photos/logo.png" alt="klocek" width="50" height="50"/></div>EliGE</div> 
+   <div id="content">
+	  <div style="text-align: center"><img id="face" src="photos/elige.jpg" alt="logo" width="200" height="200"/></div>
+	  <div class="tile"><a href="https://www.twitch.tv/elige" class="tilelink" target="_blank">Twitch</a></div>
+	  <div class="tile"><a href="index.html" class="tilelink">Powrót</a></div>
+   </div>
+   
+   <div id="description">
+   
+   <h1>Spis treści</h1>
+	<ol style="font-size:30px;">
+			<li><a href=#opis>Opis</a></li>
+			<li><a href=#info>Informacje</a></li>
+			<li><a href=#his>Historia</a></li>
+			<li><a href=#ustawienia>Ustawienia</a></li>
+		</ol>
+		
+		<div id="note">
+    <a name="opis"><b>Opis</b></a>
+	<p>Jonathan „EliGE” Jablonowski (ur. 16 lipca 1997 r.) To amerykański profesjonalny gracz Counter-Strike: Global Offensive polskiego pochodzenia, którego zaplecze konkurencyjne tkwi w StarCraft II .</p>
+   </div>
+   
+   <div class="note1">
+	<a name="info"><b>Informacje</b></a>
+		<ul style="font-size:30px;">
+			<li>Imie: Jonathan Jablonowski </li>
+			<li>Data urodzenia: 16.7.1997</li>
+			<li>Kraj pochodzenia: USA</li>
+			<li>Drużyna: Team Liquid</li>
+			<li>Rola: Rifler</li>
+		</ul>
+		</div>
+   <div id="slider"></div>
+   
+   <div class="note1">
+	<a name="his"><b>Historia</b></a>
+		<p>
+		014-12-30 — 2015-01-08 SapphireKelownaDotCom<br>
+		2015-01-08 — 2015-03-23 eLevate<br>
+		2015-03-23 — Teraz Team Liquid<br>
+		</p>
+		
+		 </div>
+   
+   <table style="text-align:center; margin-top:150px;" >
+   <a name="ustawienia"></a>
+ <tbody>
+ 
+ <tr>
+ <th colspan="7">
+ <span style="vertical-align:middle">Mouse Settings</span>
+ </th>
+ </tr>
+ 
+ <tr>
+ <th>Mouse</th>
+ <th>eDPI</th>
+ <th>DPI</th>
+ <th>Polling Rate</th>
+ <th>Sensitivity</th>
+ <th>Zoom</th>
+ <th>Raw Input</th>
+ </tr>
+ 
+ <tr>
+ <td><b>Logitech<br>G Pro</b></td>
+ <td><b>1184</b></td>
+ <td>1600</td>
+ <td>1000&nbsp;Hz</td>
+ <td>0.74</td>
+ <td>1</td>
+ <td>On</td>
+ </tr>
+ 
+ </tbody>
+ </table>
+  <a href=#logo>Powrót</a>
+   
+   </div>  
+     <div style="clear:both;"></div>
+   <div id="footer">Filip Cukierski 2tb - Wszelkie prawa zastrzeżone</div>
+ 
+</div>
+</body>
+</html>

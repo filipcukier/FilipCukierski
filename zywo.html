@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <title>ZYWOS</title>
+  <link rel="stylesheet" href="css/podstrony.css" type="text/css"/>
+		
+		<script>
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+				
+			}
+			
+		
+			function zmienslajd()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"photos/zywo/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("zmienslajd()", 3000);
+				timer2 = setTimeout("schowaj()", 2500);
+			
+			}
+			
+		</script>
+
+</head>
+
+<body onload="zmienslajd()">
+ 
+<div id="container">
+   <div id="logo">
+   <div id="logo1"><img src="photos/logo.png" alt="klocek" width="50" height="50"/></div>Zyw0o</div> 
+   <div id="content">
+	  <div style="text-align: center"><img id="face" src="photos/zywo.jpg" alt="logo" width="200" height="200"/></div>
+	  <div class="tile"><a href="https://www.twitch.tv/cs_zywoo" class="tilelink" target="_blank">Twitch</a></div>
+	  <div class="tile"><a href="index.html" class="tilelink">Powrót</a></div>
+   </div>
+   <div id="description">
+	<h1>Spis treści</h1>
+	<ol style="font-size:30px;">
+			<li><a href=#opis>Opis</a></li>
+			<li><a href=#info>Informacje</a></li>
+			<li><a href=#his>Historia</a></li>
+			<li><a href=#ustawienia>Ustawienia</a></li>
+		</ol>
+   
+    <div id="note">
+    <a name="opis"><b>Opis</b></a>
+	<p>Mathieu „ ZywOo ” Herbaut (ur. 9 listopada 2000) to francuski zawodnik Counter-Strike: Global Offensive , który obecnie gra w Team Vitality jako AWPer . Jest często uważany za najlepszego gracza Counter-Strike na świecie.</p>
+   </div>
+	
+	<div class="note1">
+	<a name="info"><b>Informacje</b></a>
+		<ul style="font-size:30px;">
+			<li>Imie: Mathieu Herbaut </li>
+			<li>Data urodzenia: 9.11.2000</li>
+			<li>Kraj pochodzenia: Francja</li>
+			<li>Drużyna: Team Vitality</li>
+			<li>Rola: AWPer</li>
+		</ul>
+		 </div>
+   
+   <div id="slider"></div>
+   
+   <div class="note1">
+	<a name="his"><b>Historia</b></a>
+		<p>
+		2014-??-?? - 2015-??-?? dizLown<br>
+		2016-??-?? - 2016-??-?? nevermind<br>
+		2017-01-13 - 2017-03-01 E-Corp Bumpers <br>
+		2017-03-11 - 2017-09-12 WysiX Team<br>
+		2017-09-12 - 2018-10-06 against All authority<br>
+		2018-10-08 - Teraz      Team Vitality<br>
+		</p>
+		
+		 </div>
+   
+   <table style="text-align:center; margin-top:150px;" >
+   <a name="ustawienia"></a>
+ <tbody>
+ 
+ <tr>
+ <th colspan="7">
+ <span style="vertical-align:middle">Mouse Settings</span>
+ </th>
+ </tr>
+ 
+ <tr>
+ <th>Mouse</th>
+ <th>eDPI</th>
+ <th>DPI</th>
+ <th>Polling Rate</th>
+ <th>Sensitivity</th>
+ <th>Zoom</th>
+ <th>Raw Input</th>
+ </tr>
+ 
+ <tr>
+ <td><b>Xtrfy<br>M4</b></td>
+ <td><b>760</b></td>
+ <td>400</td>
+ <td>1000&nbsp;Hz</td>
+ <td>1.9</td>
+ <td>1</td>
+ <td>On</td>
+ </tr>
+ 
+ </tbody>
+ </table>
+ 
+ <a href=#logo>Powrót</a>
+   
+   </div>  
+     <div style="clear:both;"></div>
+   <div id="footer">Filip Cukierski 2tb - Wszelkie prawa zastrzeżone</div>
+ 
+</div>
+</body>
+</html>

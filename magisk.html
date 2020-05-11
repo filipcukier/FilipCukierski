@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <title>Magisk</title>
+  <link rel="stylesheet" href="css/podstrony.css" type="text/css"/>
+		
+		<script>
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+				
+			}
+			
+		
+			function zmienslajd()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"photos/magisk/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("zmienslajd()", 3000);
+				timer2 = setTimeout("schowaj()", 2500);
+			
+			}
+			
+		</script>
+
+</head>
+
+<body onload="zmienslajd()">
+ 
+<div id="container">
+   <div id="logo">
+   <div id="logo1"><img src="photos/logo.png" alt="klocek" width="50" height="50"/></div>Magisk</div> 
+   <div id="content">
+	  <div style="text-align: center"><img id="face" src="photos/magisk.jpg" alt="logo" width="200" height="200"/></div>
+	  <div class="tile"><a href="https://www.twitch.tv/mag1skcsgo" class="tilelink" target="_blank">Twitch</a></div>
+	  <div class="tile"><a href="index.html" class="tilelink">Powrót</a></div>
+   </div>
+   <div id="description">
+   
+   <h1>Spis treści</h1>
+	<ol style="font-size:30px;">
+			<li><a href=#opis>Opis</a></li>
+			<li><a href=#info>Informacje</a></li>
+			<li><a href=#his>Historia</a></li>
+			<li><a href=#ustawienia>Ustawienia</a></li>
+		</ol>
+		
+		<div id="note">
+    <a name="opis"><b>Opis</b></a>
+	<p>Emil „ Magisk ” Reif (wcześniej znany jako „ Magiskb0Y ”) (ur. 5 marca 1998) jest duńskim graczem Counter-Strike: Global Offensive . Obecnie gra dla Astralis .</p>
+   </div>
+   
+	<div class="note1">
+	<a name="info"><b>Informacje</b></a>
+		<ul style="font-size:30px;">
+			<li>Imie: Emil Reif </li>
+			<li>Data urodzenia: 5.03.1998</li>
+			<li>Kraj pochodzenia: Dania</li>
+			<li>Drużyna: Astralis</li>
+			<li>Rola: Rifler</li>
+		</ul>
+		</div>
+		
+   <div id="slider"></div>
+   
+   <div class="note1">
+	<a name="his"><b>Historia</b></a>
+		<p>
+		2015-04-?? – 2015-07-?? stfuNerd<br>
+        2015-07-10 – 2015-08-11 team123<br>
+        2015-??-?? – 2015-07-21 stfuNerd<br>
+        2015-07-21 – 2015-??-?? mTw<br>
+        2015-12-07 – 2016-06-30 SK Gaming<br>
+        2016-07-15 – 2016-12-31 Team Dignitas<br>
+        2017-01-03 – 2017-08-01 North<br>
+        2017-08-21 – 2018-02-07 OpTic Gaming<br>
+        2018-02-07 – Teraz Astralis<br>
+		</p>
+	</div>
+   
+   <table style="text-align:center; margin-top:150px;" >
+   <a name="ustawienia"></a>
+ <tbody>
+ 
+ <tr>
+ <th colspan="7">
+ <span style="vertical-align:middle">Mouse Settings</span>
+ </th>
+ </tr>
+ 
+ <tr>
+ <th>Mouse</th>
+ <th>eDPI</th>
+ <th>DPI</th>
+ <th>Polling Rate</th>
+ <th>Sensitivity</th>
+ <th>Zoom</th>
+ <th>Raw Input</th>
+ </tr>
+ 
+ <tr>
+ <td><b>Zowie<br>EC2</b></td>
+ <td><b>800</b></td>
+ <td>800</td>
+ <td>1000&nbsp;Hz</td>
+ <td>1</td>
+ <td>1.18</td>
+ <td>On</td>
+ </tr>
+ 
+ </tbody>
+ </table>
+  <a href=#logo>Powrót</a>
+   
+   </div>  
+     <div style="clear:both;"></div>
+   <div id="footer">Filip Cukierski 2tb - Wszelkie prawa zastrzeżone</div>
+ 
+</div>
+</body>
+</html>

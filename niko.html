@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <title>NiKo</title>
+  <link rel="stylesheet" href="css/podstrony.css" type="text/css"/>
+		
+		<script>
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+				
+			}
+			
+		
+			function zmienslajd()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"photos/niko/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("zmienslajd()", 3000);
+				timer2 = setTimeout("schowaj()", 2500);
+			
+			}
+			
+		</script>
+
+</head>
+
+<body onload="zmienslajd()">
+ 
+<div id="container">
+   <div id="logo">
+   <div id="logo1"><img src="photos/logo.png" alt="klocek" width="50" height="50"/></div>NiKo</div> 
+   <div id="content">
+	  <div style="text-align: center"><img id="face" src="photos/niko.jpg" alt="logo" width="200" height="200"/></div>
+	  <div class="tile"><a href="https://www.twitch.tv/NiKo" class="tilelink" target="_blank">Twitch</a></div>
+	  <div class="tile"><a href="index.html" class="tilelink">Powrót</a></div>
+   </div>
+   <div id="description">
+   
+   <h1>Spis treści</h1>
+	<ol style="font-size:30px;">
+			<li><a href=#opis>Opis</a></li>
+			<li><a href=#info>Informacje</a></li>
+			<li><a href=#his>Historia</a></li>
+			<li><a href=#ustawienia>Ustawienia</a></li>
+		</ol>
+		
+		<div id="note">
+    <a name="opis"><b>Opis</b></a>
+	<p>Nikola „ NiKo ” Kovač (urodzony 16 lutego 1997) to bośniacki profesjonalny gracz Counter-Strike: Global Offensive i były zawodnik Counter-Strike , który obecnie pełni rolę lidera i Entry Fraggera dla FaZe Clan.NiKo jest powszechnie uważany za jednego z najbardziej uzdolnionych mechanicznie graczy w CS: GO, walczył o tytuł najlepszego gracza na świecie w wielu okresach swojej kariery, najczęściej przeciwko Ukraiński graczowi s1mple .</p>
+   </div>
+   
+	<div class="note1">
+	<a name="info"><b>Informacje</b></a>
+		<ul style="font-size:30px;">
+			<li>Imie: Nikola Kovač </li>
+			<li>Data urodzenia: 16.02.1997</li>
+			<li>Kraj pochodzenia: Bośnia</li>
+			<li>Drużyna: FaZe Clan</li>
+			<li>Rola: Rifler</li>
+		</ul>
+		</div>
+		
+   <div id="slider"></div>
+   
+    <div class="note1">
+	<a name="his"><b>Historia</b></a>
+		<p>
+		2012-??-?? – 2013-01-?? iNation<br>
+		2013-01-?? – 2013-03-08 e-Sports.rs<br>
+		2013-03-08 – 2013-08-31 iNation<br>
+		2013-08-31 – 2013-11-06 Team Refuse<br>
+		2013-11-06 – 2013-12-16 iNation<br>
+		2013-12-16 – 2014-03-21 GamePub<br>
+		2014-08-21 – 2015-01-12 aimface<br>
+        2015-01-11 – 2015-03-04 iNation<br>
+        2015-03-04 – 2015-05-04 mousesports<br>
+        2015-08-30 – 2017-02-19 mousesports<br>
+        2017-02-19 – Teraz FaZe Clan<br>
+		</p>
+	</div>
+   
+   <table style="text-align:center; margin-top:150px;" >
+   <a name="ustawienia"></a>
+ <tbody>
+ 
+ <tr>
+ <th colspan="7">
+ <span style="vertical-align:middle">Mouse Settings</span>
+ </th>
+ </tr>
+ 
+ <tr>
+ <th>Mouse</th>
+ <th>eDPI</th>
+ <th>DPI</th>
+ <th>Polling Rate</th>
+ <th>Sensitivity</th>
+ <th>Zoom</th>
+ <th>Raw Input</th>
+ </tr>
+ 
+ <tr>
+ <td><b>ZOWIE<br>S1</b></td>
+ <td><b>630</b></td>
+ <td>400</td>
+ <td>1000&nbsp;Hz</td>
+ <td>1.55</td>
+ <td>0.9</td>
+ <td>On</td>
+ </tr>
+ 
+ </tbody>
+ </table>
+ 
+ <a href=#logo>Powrót</a>
+   
+   </div>  
+     <div style="clear:both;"></div>
+   <div id="footer">Filip Cukierski 2tb - Wszelkie prawa zastrzeżone</div>
+ 
+</div>
+</body>
+</html>
